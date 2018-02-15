@@ -1,0 +1,10 @@
+#Bungie API Key
+
+export BUNGIE_API_KEY=ed699d0babe24446a24d4cb0e4d0d111
+
+import requests
+
+import os
+
+requests.get("https://bungie.net/Platform/Destiny2/SearchDestinyPlayer/2/{Defiance-Yeti}", 
+             headers={"X-API-Key": os.environ["BUNGIE_API_KEY"]})
